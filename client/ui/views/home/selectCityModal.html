@@ -1,0 +1,27 @@
+<div id='selectCityModalHolder' class="row">
+   <div class="modal" id="selectCityModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Select Your City</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="width:80%;margin:0px auto">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <div id='selectCityDropDownCtr' class="col-xs-12 col-sm-12">
+                     <select class="form-control" id="slctCityDropDownSelect1">    
+                         <option class="text-uppercase" value="select city">--select your city--</option>                                               
+                         <option class="text-uppercase" ng-repeat="city in cities | orderBy : 'city' | unique :'city'" value="{{city}}">{{city.city}}</option>                                                   
+                    </select> 
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div><!-- / Select City Modal -->     
+
+

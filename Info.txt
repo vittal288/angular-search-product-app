@@ -1,0 +1,34 @@
+Refer this fir CORS
+http://www.bennadel.com/blog/2327-cross-origin-resource-sharing-cors-ajax-requests-between-jquery-and-node-js.htm
+
+BackboneJS view
+http://www.codeproject.com/Articles/801863/BackBone-Tutorial-Part-Understanding-Backbone-js-V
+
+Marrionette Region concept
+http://marionettejs.com/docs/v1.8.8/marionette.region.html
+
+Marrionette Layout concept
+https://lostechies.com/derickbailey/2012/03/22/managing-layouts-and-nested-views-with-backbone-marionette/
+
+
+sample project on marrionette and backboneJS
+https://github.com/BoilerplateMVC/Marionette-Require-Boilerplate
+
+complex layout marrionette example
+search in google like this "marionette js layout example"
+http://jsfiddle.net/mickeyvip/bbPKH/
+http://jsfiddle.net/TDqkj/6/
+http://www.eccesignum.org/blog/simple-backbonemarionette-example-with-nested-views
+
+
+UNIT TESTING :
+1.Follow this link to setup test environment https://angular.github.io/protractor/#/
+2. Once you done then run the following command 
+3. protractor config.js
+
+
+
+
+
+
+

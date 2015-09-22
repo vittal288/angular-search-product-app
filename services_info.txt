@@ -1,0 +1,32 @@
+REST SERVICESS INFO:
+1.fetch distinct city info 
+http://localhost:9000/rest-api/fetchDistinctCities
+
+2. fetch home page tiles 
+http://localhost:9000/rest-api/fetchHomeBrandTilesInfo/cityName/:cityName
+example : http://localhost:9000/rest-api/fetchHomeBrandTilesInfo/cityName/Bengaluru
+
+3.Fetch Product info by city and the prodcut name
+http://localhost:9000/rest-api/fetchProductInfoByCity/cityName/:cityName/srchItem/:srchItem
+example : http://localhost:9000/rest-api/fetchProductInfoByCity/cityName/Bengaluru/srchItem/Iphone%206
+
+4.Fetch detailed product info by its unique id 
+http://localhost:9000/rest-api/fetchDetailedProductInfo/prodId/:prodId
+example : http://localhost:9000/rest-api/fetchDetailedProductInfo/prodId/2
+
+5.Fetch products info by search keyword 
+http://localhost:9000/rest-api/fetchProductDetailsBySearchKeyWord/searchKeyWord/:searchKeyWord
+example : 
+
+6.Filter the serched products 
+http://localhost:9000/rest-api/filterSearchedProducts/brandName/:brandName/cityName/:cityName
+
+example : http://localhost:9000/rest-api/filterSearchedProducts/brandName/'Global%20Desi'/cityName/Bengaluru
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ADMIN PANEL @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1. Render Admin page
+http://localhost:9000/admin/
+
+2. File upload 
+http://localhost:9000/client/fileUpload

@@ -1,0 +1,17 @@
+<div class="row voffset-3">
+     <div class="col-xs-12 col-xs-offset-1">
+         <div class="affix">
+             <span class="glyphicon glyphicon-filter"></span>
+             <span>Refine Your Search</span>
+             <div id="brandFilter-cntr" class="col-xs-12">                                
+                 <div class="checkbox" ng-repeat="brand in brands">
+                     <label>
+                         <!--<input class="brand-chk-box" type="checkbox" id="id-{{brand}}" ng-click="sortProductsByBrand(brand)" value="{{brand}}">{{brand}}-->
+                         <input class="brand-chk-box" id="{{brand}}" type="checkbox" value="{{brand}}" ng-checked="arrSelectedBrands.indexOf(brand) > -1" ng-click="toggleSelection(brand)" />
+                         {{brand}}
+                     </label>
+                 </div>                 
+             </div>
+         </div>
+     </div>    
+</div>

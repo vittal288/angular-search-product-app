@@ -1,0 +1,29 @@
+{
+  "name": "arocity",
+  "version": "0.0.0",
+  "description": "Sample POC on NodejS and ExpressJS",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.2",
+    "base64-stream": "^0.1.2",
+    "mysql": "^2.5.5",
+    "mysql-queues": "^1.0.0",
+    "node-inspector": "^0.9.1",
+    "winston": "^0.9.0",
+    "ya-csv": "^0.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vittal288/arocity.git"
+  },
+  "author": "Vittal Kamkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vittal288/arocity/issues"
+  },
+  "homepage": "https://github.com/vittal288/arocity"
+}
