@@ -28,7 +28,7 @@ router.get('/', function (req,res) {
 });
 //definging router
 //************************************************************************
-router.get('/rest-api/fetchDistinctCities', function (req, res) {    
+router.get('/rest-api/fetchDistinctCities', function (req, res) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
@@ -60,7 +60,7 @@ router.get('/rest-api/fetchDistinctCities', function (req, res) {
 
 //************************************************************************
 //router.get('/rest-api/fetchHomeBrandTilesInfo/cityName/:cityName', function (req, res) {
-router.get('/rest-api/fetchHomeBrandTilesInfo/:cityName', function (req, res) {    
+router.get('/rest-api/fetchHomeBrandTilesInfo/:cityName', function (req, res) {
 
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -93,7 +93,7 @@ router.get('/rest-api/fetchHomeBrandTilesInfo/:cityName', function (req, res) {
 
 //************************************************************************
 //router.get('/rest-api/fetchProductInfoByCity/cityName/:cityName/srchItem/:srchItem', function (req, res) {
-router.get('/rest-api/fetchProductInfoByCity/:cityName/:srchItem', function (req, res) {    
+router.get('/rest-api/fetchProductInfoByCity/:cityName/:srchItem', function (req, res) {
 
     //http://localhost:9090/rest-api/fetchProductInfoByCity/cityName/ALL/srchItem/iphone%206
     //logger.log('info', req.path);
@@ -147,7 +147,7 @@ router.get('/rest-api/fetchProductInfoByCity/:cityName/:srchItem', function (req
 });
 //************************************************************************
 //router.get('/rest-api/fetchDetailedProductInfo/prodId/:prodId', function (req, res) {
-router.get('/rest-api/fetchDetailedProductInfo/:prodId', function (req, res) {   
+router.get('/rest-api/fetchDetailedProductInfo/:prodId', function (req, res) {
 
     var prodId = req.params.prodId;
     var vProdId = "'" + prodId.toUpperCase() + "'";
@@ -300,6 +300,7 @@ router.post('/client/bnnerFileUpload',function(req,res){
 
 //CSV file upload
 router.post('/client/fileUpload',function(req,res){
+  console.log('I am in client/fileUpload');
   var _fileName = "csv_data.csv";
   var _dirPath =process.cwd()+"/client/csv_file/"+_fileName;
   //receieve AJAX query parameter data

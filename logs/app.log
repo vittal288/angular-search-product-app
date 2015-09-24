@@ -3544,3 +3544,11 @@
 2015-09-22T14:19:53.126Z - info: 
  MYSQL @@@@@@ fetchHomeBrandTilesInfo 
  select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BENGALURU'
+2015-09-24T14:15:27.338Z - info: 
+ CSV File Upload : csv_data.csv
+2015-09-24T14:16:55.670Z - info: 
+ CSV File Upload : csv_data.csv
+2015-09-24T14:18:55.695Z - info: 
+ CSV File Upload : csv_data.csv
+2015-09-24T14:26:02.938Z - info: 
+ CSV File Upload : csv_data.csv
