@@ -317,8 +317,8 @@ router.post('/client/fileUpload',function(req,res){
         }
         else {
           logger.info('\n CSV File Upload :' ,_fileName);
-          //var readCSV = new readCSVandInsert();
-          //readCSV.init();
+          var readCSV = new readCSVandInsert();
+          readCSV.init();
         }
     });
   });

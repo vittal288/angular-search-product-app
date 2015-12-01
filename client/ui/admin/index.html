@@ -56,12 +56,19 @@ and open the template in the editor.
                       <input id="btnClearDataBase" type="button" class="btn btn-danger pull-right" onclick="clearDataBase()" value="CLEAR DB" />
                     </div>
                     <div class="col-sm-12 cstm-box ">
-                        <fieldset>
+                        <!--<fieldset>
                             <legend>CSV File</legend>
                             <div class="form-group">
                                 <input class="form-control" type="file" onchange="onCSVFileSelect(this)" />
-                            </div>
-                        </fieldset>
+                            </div>                              
+                        </fieldset>-->
+                       <div class="row">
+                            <label class="btn btn-default" for="inputImage" title="Upload image file">
+                                <input class="hide" id="inputImage" name="file" type="file" accept="csv" onchange="onCSVFileSelect(this)">
+                                Upload CSV File
+                                <span class="glyphicon glyphicon-open-file"></span>
+                            </label>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -118,7 +125,6 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer>

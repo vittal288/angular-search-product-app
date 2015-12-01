@@ -80,8 +80,9 @@ function clearDataBase(){
 }
 
 function onCSVFileSelect(item) {
-    console.log('Item ' , item);
-    showSpin();
+    //console.log(item);
+    debugger;
+    //showSpin();
     var file = item.files[0];
     item.value = "";
     var fileReader = new FileReader();
@@ -114,7 +115,7 @@ function onCSVFileSelect(item) {
 }
 //*********************************************************************************
 function ajaxCSVFileUpload(sendingData) {
-
+    console.log(sendingData)
     //invoking expressJS controller to insert
     $.ajax({
         url: "/client/fileUpload",

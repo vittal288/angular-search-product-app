@@ -5,30 +5,16 @@ var path = require('path');
 //***********************************
 //client code configuration
 //make this folder to public because it has to run on the browser and this folder contains the index page
-var _clientPath = path.join(__dirname+"/client/ui");
-var _adminPath = path.join(__dirname+"/client/ui/admin");
+
+
+
+var _clientPath      = path.join(__dirname+"/client/ui");
+//var _adminPath       = path.join(__dirname+"/client/ui/admin");
+var _bowerComponents = path.join(__dirname+"/bower_components/")
+
+app.use(express.static(_bowerComponents));
 app.use(express.static(_clientPath));
-app.use(express.static(path.join(__dirname+"/bower_components/")));
-
-
-
-
-
-// for admin panel
-app.get('/admin',function(req,res){
-  //console.log('Load Admin Module');
-  res.send(_adminPath);
-});
-
-//not allowed for rest of URL
-app.get('/*',function(req,res){
-  console.log('NOT allowed');
-  res.send('Method not allowed')
-});
-
-
-
-
+//app.use(express.static(_adminPath));
 
 //define rest_api router
 app.use(require('./server/rest_api/rest_api'));
