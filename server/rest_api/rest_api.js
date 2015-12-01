@@ -2,7 +2,8 @@
 var express          = require('express');
 var mysql            = require('mysql');
 var fs               = require('fs');
-var readCSVandInsert = require('../../client/readCSVandInsert/readCSVandInsert');
+//var readCSVandInsert = require('../../client/readCSVandInsert/readCSVandInsert');
+var readCSVandInsert = require('../readCSVandInsert/readCSVandInsert');
 var looger           = require('../../logs/logger');
 var configs          = require('../../configs/config');
 var router           = express.Router();
@@ -302,7 +303,11 @@ router.post('/client/bnnerFileUpload',function(req,res){
 router.post('/client/fileUpload',function(req,res){
   console.log('I am in client/fileUpload');
   var _fileName = "csv_data.csv";
-  var _dirPath =process.cwd()+"/client/csv_file/"+_fileName;
+  //var _dirPath =process.cwd()+"/client/csv_file/"+_fileName;
+  
+  var _dirPath =process.cwd()+"/server/csv_data/"+_fileName;
+  
+  console.log("DIR PATH",_dirPath);
   //receieve AJAX query parameter data
     var sData="",oData;
     req.on("data",function(chunk){

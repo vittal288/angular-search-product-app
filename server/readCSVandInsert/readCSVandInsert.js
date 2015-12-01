@@ -58,7 +58,7 @@ var readCSVandInsertToDB = function () {
         });*/
 
         var fs = require('fs');
-        var array = fs.readFileSync('client/csv_file/csv_data.csv').toString().split("\n");
+        var array = fs.readFileSync('server/csv_data/csv_data.csv').toString().split("\n");
         var i =1;
         iLoopLen = array.length-1;
         for(var i=1;i<iLoopLen;i++){
