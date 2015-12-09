@@ -2,3 +2,4 @@ bower_components
 node_modules
 logs/app.log
 npm-debug.log
+client/ui/libs

@@ -9,75 +9,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="">
         <meta name="author" content="">
-		
+
 		<!-- StyleSheet -->
-		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />		
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="css/customStyles.css">
 </head>
 <body class="myBody" ng-app="aroCityApp" ng-controller="mainController">
-	
+
 	<div ng-include="'views/home/selectCityModal.html'"></div>
 	<div class="transparent_background">&nbsp;</div>
 	<!--HEADER-->
-    <header ng-include="'views/common/header.html'"></header>	
-	<!--/ HEADER-->		
-				
-	<div class="container">	
-	    <!-- place holder for a views -->		
+    <header ng-include="'views/common/header.html'"></header>
+	<!--/ HEADER-->
+
+	<div class="container">
+	    <!-- place holder for a views -->
 		<div ng-view class="main-container">
-		</div>						
+		</div>
 	</div>
-	
+
 	<!--FOOTER-->
     <footer ng-include="'views/common/footer.html'" class="footer"></footer>
     <!--/FOOTER-->
-	
+
 	<!--libs -->
-	<script src="jquery/dist/jquery.js"></script>
-	<script src="angular/angular.js"></script>		
-	<script src="angular-route/angular-route.js"></script>
-	<script src="angular-resource/angular-resource.js"></script>		
-	<script src="bootstrap/dist/js/bootstrap.js"></script>
-	<script src="underscore/underscore.js"></script>
-	
+	<script src="libs/jquery/dist/jquery.js"></script>
+	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular-route/angular-route.js"></script>
+	<script src="libs/angular-resource/angular-resource.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="libs/underscore/underscore.js"></script>
+
 	<!-- angular-bootstrap -->
-	<script src="angular-bootstrap/ui-bootstrap.js"></script>
-	<script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
-			
+	<script src="libs/angular-bootstrap/ui-bootstrap.js"></script>
+	<script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
 	<!-- custom scripts -->
 	<script src="js/app.js"></script>
 	<!-- controllers -->
 	<script src="js/controllers/appController.js"></script>
 	<script src="js/controllers/searchBar.js"></script>
-	
+
 	<!-- homePage -->
 	<script src="js/controllers/home/homePage.js"></script>
 	<script src="js/controllers/home/slider.js"></script>
-	
-	<!-- searchedPage -->	
+
+	<!-- searchedPage -->
 	<script src="js/controllers/searchedDetails/searchedPage.js"></script>
-	
+
 	<!-- detailedProductInfo -->
 	<script src="js/controllers/detailedProductInfo/detailedProductInfo.js"></script>
-		
+
 	<!-- factories -->
 	<script src="js/factories/rest-api.js"></script>
-	
+
 	<!-- filters -->
 	<script src="js/filters/filter.js"></script>
-	
-	
+
+
 	<!-- module -->
 	<script src="js/modules/module1.js"></script>
-	
+
 	<!-- directives -->
 	<script src="js/directives/tabs.js"></script>
-	
+
 	<!-- utils -->
 	<!--<script src="js/utility/utils.js"></script> -->
-	
+
 	<!--<script src="js/controllers/view1Controller.js"></script>
-	<script src="js/controllers/view2Controller.js"></script>	
+	<script src="js/controllers/view2Controller.js"></script>
 	<script src="js/factories/sampleFactory.js"></script>-->
 </body>
 </html>
