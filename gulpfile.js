@@ -1,14 +1,34 @@
-var gulp = require('gulp');
+
 var browserSync = require('browser-sync');
 var gulpConfig = require('./gulpConfig')();
-var server = require('gulp-develop-server');
 var express = require('express');
 var path = require('path');
-var bowerSrc = require('gulp-bower-src');
-var gulpFilter = require('gulp-filter');
+var mysql = require('mysql');
+var gulp = require('gulp'),
+    bowerSrc = require('gulp-bower-src'),
+    server = require('gulp-develop-server'),
+    gulpFilter = require('gulp-filter'),
+    runSequence = require('run-sequence'),
+    gutil = require('gulp-util'),
+    clean = require('gulp-clean'),
+    flatten =require('gulp-flatten');
+
+
 
 
 //******************************************************************************
+//watch following folders and files
+gulp.task('watch', function () {
+
+    console.log('JS PATH ',gulpConfig.destinationDir+'index.html');
+    gulp.watch([gulpConfig.destinationDir+'js/**/*.js'],compileReload);
+    //gulp.watch(['app/*.ts'], compileCopyAndReload);
+
+    gulp.watch(gulpConfig.destinationDir+'css/*.css',compileReload);
+    gulp.watch(gulpConfig.destinationDir+'views/**/*.html',compileReload);
+    gulp.watch(gulpConfig.destinationDir+'index.html',compileReload);
+});
+
 //start the server
 gulp.task('exposeRESTAPI',function(){
 
@@ -22,12 +42,14 @@ gulp.task('exposeRESTAPI',function(){
 });
 
 gulp.task('serve', function () {
-console.log('Application is running with http://localhost:8000');
-//var filter = gulpFilter('**/*.js', '!**/*.min.js');
+
+ console.log('Application is running with http://localhost:8000');
+ //var filter = gulpFilter('**/*.js', '!**/*.min.js');
   //sync bower_components to libs
   bowerSrc()
     //.pipe(filter)
 		.pipe(gulp.dest(gulpConfig.destinationDir+'/libs'));
+    //.pipe(gulp.dest(gulpConfig.destinationDir+'/libs'));
 
   //console.log('destinationDir' ,gulpConfig.destinationDir);
    browserSync({
@@ -41,11 +63,47 @@ console.log('Application is running with http://localhost:8000');
        },*/
        server:
        {
-           baseDir: gulpConfig.destinationDir
+           baseDir: gulpConfig.destinationDir+gulpConfig.serveDir
        }
    });
 });
 
+gulp.task('copyFilesToDest',function(){
+
+});
+
+function compileReload() {
+    runSequence(
+             //'compileTS',
+             //'copyDebugAppFilesToDestination',
+             //'injectToIndexHtmlNoUnitTests',
+             browserSync.reload
+           );
+
+    //browserSync.reload
+}
+
+gulp.task('clean', function(){
+  console.log('Destination Dir' , gulpConfig.destinationDir)
+  return gulp.src([gulpConfig.destinationDir], {read:true})
+  .pipe(clean());
+});
+
+gulp.task('move',['clean'], function(){
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  gulp.src(gulpConfig.filesToMove, { base: './' })
+  .pipe(gulp.dest(gulpConfig.destinationDir));
+
+
+  /*gulp.src(gulpConfig.filesToMove)
+  .pipe(flatten())
+  .pipe(gulp.dest(gulpConfig.destinationDir));*/
+});
+
+gulp.task('watchServe',['exposeRESTAPI','watch','serve']);
 
 //
 gulp.task('serveDev', ['exposeRESTAPI','serve']);
+
+gulp.task('default',['clean','move'])
