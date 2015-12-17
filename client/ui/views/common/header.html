@@ -17,7 +17,7 @@
                     <div class="input-group">
                         <div class="input-group-btn">
                             <button id="btnSelctCityDropn"  type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <span ng-bind="selectedCity">{{dafaultVal}}</span> &nbsp;                                
+                                <span ng-bind="selectedCity">{{dafaultVal}}</span> &nbsp;
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu srch-menu-items" role="menu">
@@ -25,23 +25,20 @@
                                 <li class="divider"></li>
                                 <li ng-repeat="city in cities | orderBy :'city' | unique :'city'" ng-click="selectCity(city.city)">
                                     <a class="text-uppercase">{{city.city}}</a>
-                                <li>                                                                   
+                                <li>
                             </ul>
                         </div><!-- /btn-group -->
                         <input type="text" ng-model="searchItem" typeahead-on-select="onSelect($item, $model, $label)"  class="form-control" placeholder="serch for a product, category or brand" typeahead="searchItem for searchItem in storeItems | filter:$viewValue | limitTo:20">
                         <div class="input-group-btn">
                             <button id="btnSearchItem" class="btn btn-info" ><i class="glyphicon glyphicon-search" ng-click="searchProducts(searchItem)"></i></button>
-                        </div>                        
+                        </div>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->                                   
+
+
+            </div><!-- /.row -->
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->       
+    <!-- /.container -->
 </nav>
-
-
-    
-
-

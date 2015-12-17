@@ -20,7 +20,8 @@ module.exports = function () {
           destinationDir: _destinationDir,
           serveDir:_serveDir,
           serverCodeBaseDir:_serverCodeBaseDir,
-          filesToMove:_filesToMove
+          filesToMove:_filesToMove,
+          uiCodeBaseDir:_uiCodeBaseDir
         }
     return config;
 };

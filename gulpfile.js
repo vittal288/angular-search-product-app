@@ -20,13 +20,11 @@ var gulp = require('gulp'),
 //watch following folders and files
 gulp.task('watch', function () {
 
-    console.log('JS PATH ',gulpConfig.destinationDir+'index.html');
-    gulp.watch([gulpConfig.destinationDir+'js/**/*.js'],compileReload);
-    //gulp.watch(['app/*.ts'], compileCopyAndReload);
-
-    gulp.watch(gulpConfig.destinationDir+'css/*.css',compileReload);
-    gulp.watch(gulpConfig.destinationDir+'views/**/*.html',compileReload);
-    gulp.watch(gulpConfig.destinationDir+'index.html',compileReload);
+    console.log('gulp is watching HTML,JS and CSS files...' );
+    gulp.watch([gulpConfig.uiCodeBaseDir+'js/**/*.js'],compileReload);    
+    gulp.watch(gulpConfig.uiCodeBaseDir+'css/*.css',compileReload);
+    gulp.watch(gulpConfig.uiCodeBaseDir+'views/**/*.html',compileReload);
+    gulp.watch(gulpConfig.uiCodeBaseDir+'index.html',compileReload);
 });
 
 //start the server
@@ -63,7 +61,8 @@ gulp.task('serve', function () {
        },*/
        server:
        {
-           baseDir: gulpConfig.destinationDir+gulpConfig.serveDir
+           //baseDir: gulpConfig.destinationDir+gulpConfig.serveDir
+           baseDir: gulpConfig.uiCodeBaseDir
        }
    });
 });
@@ -75,7 +74,7 @@ gulp.task('copyFilesToDest',function(){
 function compileReload() {
     runSequence(
              //'compileTS',
-             //'copyDebugAppFilesToDestination',
+             'move',
              //'injectToIndexHtmlNoUnitTests',
              browserSync.reload
            );
@@ -95,15 +94,13 @@ gulp.task('move',['clean'], function(){
   gulp.src(gulpConfig.filesToMove, { base: './' })
   .pipe(gulp.dest(gulpConfig.destinationDir));
 
-
-  /*gulp.src(gulpConfig.filesToMove)
-  .pipe(flatten())
-  .pipe(gulp.dest(gulpConfig.destinationDir));*/
 });
 
 gulp.task('watchServe',['exposeRESTAPI','watch','serve']);
 
 //
-gulp.task('serveDev', ['exposeRESTAPI','serve']);
+gulp.task('serveDev', ['exposeRESTAPI','serve','watch'],function(){
+  console.log('Application is Running from ', gulpConfig.uiCodeBaseDir ,'Directory')
+});
 
 gulp.task('default',['clean','move'])
