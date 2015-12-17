@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     gutil = require('gulp-util'),
     clean = require('gulp-clean'),
-    flatten =require('gulp-flatten');
+    flatten =require('gulp-flatten'),
+    sass  = require('gulp-sass');
 
 
 
@@ -21,12 +22,21 @@ var gulp = require('gulp'),
 gulp.task('watch', function () {
 
     console.log('gulp is watching HTML,JS and CSS files...' );
-    gulp.watch([gulpConfig.uiCodeBaseDir+'js/**/*.js'],compileReload);    
-    gulp.watch(gulpConfig.uiCodeBaseDir+'css/*.css',compileReload);
+    gulp.watch([gulpConfig.uiCodeBaseDir+'js/**/*.js'],compileReload);
+    gulp.watch(gulpConfig.uiCodeBaseDir+'css/**/*.css',compileReload);
+    gulp.watch(gulpConfig.uiCodeBaseDir+'sass/*.scss',compileReload);
     gulp.watch(gulpConfig.uiCodeBaseDir+'views/**/*.html',compileReload);
     gulp.watch(gulpConfig.uiCodeBaseDir+'index.html',compileReload);
+
 });
 
+
+//task to convert SCSS files to CSS files
+gulp.task('compileSCSStoCSS',function(){
+  gulp.src(gulpConfig.uiCodeBaseDir+'/css/sass/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(gulpConfig.uiCodeBaseDir+'css/'));
+});
 //start the server
 gulp.task('exposeRESTAPI',function(){
 
@@ -83,7 +93,6 @@ function compileReload() {
 }
 
 gulp.task('clean', function(){
-  console.log('Destination Dir' , gulpConfig.destinationDir)
   return gulp.src([gulpConfig.destinationDir], {read:true})
   .pipe(clean());
 });
@@ -103,4 +112,4 @@ gulp.task('serveDev', ['exposeRESTAPI','serve','watch'],function(){
   console.log('Application is Running from ', gulpConfig.uiCodeBaseDir ,'Directory')
 });
 
-gulp.task('default',['clean','move'])
+gulp.task('default',['clean','move','compileSCSStoCSS'])

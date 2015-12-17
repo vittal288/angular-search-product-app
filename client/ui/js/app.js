@@ -3,24 +3,24 @@ console.log('AroCity App is running with 0.0.1 version ');
 
 //console.log('UI BOOTSTRAP---->')
 //set constant here
-aroCityApp.constant('configs',{					
+aroCityApp.constant('configs',{
 		restAPIPram:{
 			protocal:'http',
 			host:'localhost',
 			port:'9000',
-			restAPIPath:'rest-api'				
-		}				
+			restAPIPath:'rest-api'
+		}
 });
 
 //set default vaues
 aroCityApp.value('defaultVal',{
 		defaultValues:{
 			'selectDropDownVal' : 'Select City'
-		}	
+		}
 });
 
 
-//define routes 
+//define routes
 aroCityApp.config(function($routeProvider){
 		$routeProvider
 		.when('/',{
@@ -35,28 +35,9 @@ aroCityApp.config(function($routeProvider){
 			controller:'detailedProductInfo',
 			templateUrl:'views/detailedProductInfo/show.html'
 		})
+		.when('/createUser/',{
+			controller:'createUser',
+			templateUrl:'views/user/createUser.html'
+		})
 		.otherwise({redirectTo:'/'});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -309,3 +309,612 @@
 2015-12-17T09:07:40.106Z - info: 
  MYSQL @@@@@@ fetchHomeBrandTilesInfo 
  select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:20:10.692Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:20:10.716Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:45:23.115Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:45:23.189Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:45:30.484Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:45:30.509Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:46:11.302Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:46:11.330Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:46:19.338Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:46:19.369Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:47:09.125Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:47:09.166Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:47:59.003Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:47:59.046Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:48:39.451Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:48:39.505Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:48:53.431Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:48:53.469Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:49:04.598Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:49:04.652Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:49:27.243Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:49:27.287Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:49:36.979Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:49:36.998Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:49:47.546Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:49:47.590Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:49:59.486Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:49:59.515Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:50:05.890Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:50:05.915Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:50:08.672Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:50:08.700Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:50:52.383Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:50:52.410Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:50:58.613Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:50:58.651Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:51:09.442Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:51:09.480Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:51:43.075Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:51:43.113Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:51:54.547Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:51:54.579Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:52:00.405Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:52:00.443Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:52:44.666Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:52:44.716Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:54:15.760Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:54:15.792Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:54:26.443Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:54:26.497Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:58:16.624Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:58:16.678Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:58:29.842Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:58:29.889Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:58:50.767Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:58:50.826Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:59:00.395Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:59:00.437Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:59:05.391Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:59:05.443Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:59:36.931Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:59:36.979Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:59:44.904Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:59:44.941Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T09:59:55.515Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T09:59:55.551Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:10:56.882Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:10:56.919Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:11:22.466Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:11:22.506Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:11:34.309Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:11:36.573Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:11:44.387Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:11:44.422Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:11:51.311Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:11:51.336Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:15:37.386Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:15:37.418Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:15:48.898Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:15:48.936Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:20:05.000Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:20:05.031Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:22:17.122Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:22:17.156Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:22:33.240Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:22:33.274Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:22:46.976Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:22:47.017Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:23:11.283Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:23:11.317Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:26:03.087Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:26:03.119Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:28:11.988Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:28:12.033Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:28:19.473Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:28:19.506Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:29:07.068Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:29:07.102Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:29:14.711Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:29:14.741Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:29:15.810Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:29:15.864Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:29:16.645Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:29:16.686Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:29:58.601Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:29:58.638Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:30:01.761Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:30:01.796Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:36:56.162Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:36:56.202Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:37:01.587Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:37:01.624Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:37:29.111Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:37:29.153Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:37:36.198Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:37:36.243Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:38:14.206Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:38:16.742Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:38:23.620Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:38:23.674Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:53:52.136Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:53:52.166Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:05.514Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:54:05.545Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:32.725Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:54:32.779Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:41.165Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:54:41.197Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:54.107Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:54:54.139Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:56.223Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:54:58.735Z - info: 
+ MYSQL @@@@@@ fetchProductInfoByCity 
+ SELECT t.name AS prodName, t.id, t.category, t.desc AS prodDesc, t.brandName, t.price AS originalPrice, t.thumbnail_path, t.city, t.offerPrice from (SELECT t1.name, t1.id, t1.category, t1.desc, t1.brandName, t1.price, t1.thumbnail_path, t2.name as retailerName, t2.city, t3.offerPrice                  from tbl_product t1, tbl_seller t2, tbl_offer t3, tbl_seller_product t4, tbl_product_offer t5 where t1.id = t4.product_id and t2.id = t4.seller_id and t1.id = t5.product_id and t3.id = t5.offer_id) t                 where	t.city ='BANGALORE' and (t.name = 'IPHONE 6' or t.category = 'IPHONE 6' or t.retailerName = 'IPHONE 6' or t.brandName = 'IPHONE 6')
+2015-12-17T10:55:07.617Z - info: 
+ MYSQL @@@@@@ fetchDetailedProductInfo 
+ SELECT tbl_seller.name AS sellerName,tbl_seller.city,tbl_seller.addr,tbl_seller.contactNo, tbl_product.name AS prodName,tbl_product.image_path,tbl_product.thumbnail_path,tbl_product.desc,tbl_product.brandName,tbl_product.price,tbl_offer.name AS offerName,tbl_offer.type,tbl_offer.desc AS offerDesc,tbl_offer.offerPrice                 FROM tbl_seller LEFT JOIN tbl_product ON tbl_seller.id=tbl_product.id LEFT JOIN tbl_offer ON tbl_product.id = tbl_offer.id WHERE tbl_product.id ='3' 
+2015-12-17T10:55:32.585Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:55:32.631Z - info: 
+ MYSQL @@@@@@ fetchDetailedProductInfo 
+ SELECT tbl_seller.name AS sellerName,tbl_seller.city,tbl_seller.addr,tbl_seller.contactNo, tbl_product.name AS prodName,tbl_product.image_path,tbl_product.thumbnail_path,tbl_product.desc,tbl_product.brandName,tbl_product.price,tbl_offer.name AS offerName,tbl_offer.type,tbl_offer.desc AS offerDesc,tbl_offer.offerPrice                 FROM tbl_seller LEFT JOIN tbl_product ON tbl_seller.id=tbl_product.id LEFT JOIN tbl_offer ON tbl_product.id = tbl_offer.id WHERE tbl_product.id ='3' 
+2015-12-17T10:55:40.980Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:56:20.142Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:56:27.128Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:56:28.979Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:56:29.010Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T10:56:37.584Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:57:58.298Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:58:21.346Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T10:59:43.698Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:00:39.749Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:00:55.456Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:01:11.989Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:01:24.280Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:01:35.797Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:01:55.397Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:02:10.922Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T11:03:05.560Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:03:05.596Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T11:13:17.473Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T11:13:18.944Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:13:18.972Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T11:13:42.958Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:18:09.801Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:18:52.211Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:33:07.027Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:38:15.558Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:38:42.090Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T11:42:31.449Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:07:43.454Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:07:43.480Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:10:51.487Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:10:51.543Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:12:32.882Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:12:32.973Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:12:33.142Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:12:33.207Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:13:49.600Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:13:49.625Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:15:18.386Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:15:18.412Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:17:47.671Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:17:47.861Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:21:29.177Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:21:29.202Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T13:21:51.138Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T13:21:51.899Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:10:29.114Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:10:29.145Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:11:04.488Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:11:04.531Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:11:15.232Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:11:15.269Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:12:25.740Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:12:25.772Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:13:51.513Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:13:51.537Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:04.023Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:04.134Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:04.842Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:04.895Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:04.975Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:05.024Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:08.209Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:08.247Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:08.949Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:09.003Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'
+2015-12-17T14:14:09.226Z - info: 
+ MYSQL @@@@@@ fetchDistinctCities 
+ SELECT tbl_seller.city,tbl_seller.id,tbl_seller.name as retailerName,tbl_product.name,tbl_product.brandName FROM tbl_seller                 INNER JOIN tbl_product ON tbl_seller.id=tbl_product.id
+2015-12-17T14:14:09.293Z - info: 
+ MYSQL @@@@@@ fetchHomeBrandTilesInfo 
+ select t1.*,t2.*,t2.name as sellerName from tbl_product t1, tbl_seller t2, tbl_seller_product t3 where t1.id = t3.product_id and t2.id = t3.seller_id and t2.city ='BANGALORE'

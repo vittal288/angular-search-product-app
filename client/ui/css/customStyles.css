@@ -1,35 +1,8 @@
-﻿
- @font-face {
-    font-family: 'Roboto-Light';
-    src: url('customFonts/Roboto-Light.ttf') format('truetype');
-}
- @font-face {
-    font-family: 'Roboto-Bold';
-    src: url('customFonts/Roboto-Bold.ttf') format('truetype');
-}
 
-a,p,label,span.text-holder,small{
-    font-family:Roboto-Light !important;
-}
-ul li {
-    list-style:none;
-}
 
-h1,h2,h3,h4,h5,h6,strong {
-    font-family: 'Roboto-Bold';
-}
-header{
-    height:60px;
-    background-color:#222;
-}
-.navbar-inverse{
-    border:none !important;
-    background-color:inherit !important;
-}
 a.arocity-logo{
     color: #46b8da !important;
     font-size:22px;
-    font-family: 'Roboto-Bold' !important;
     text-shadow: 5px 4px 0px rgba(214, 255, 238, 0.47);
     letter-spacing:1px;
 }
@@ -40,23 +13,11 @@ a.arocity-logo{
     text-decoration:none;
 }
 
-.voffset  { margin-top: 2px; }
-.voffset-1 { margin-top: 5px; }
-.voffset-2 { margin-top: 10px; }
-.voffset-3 { margin-top: 15px; }
-.voffset-4 { margin-top: 30px; }
-.voffset-5 { margin-top: 40px; }
-.voffset-6 { margin-top: 60px; }
-.voffset-7 { margin-top: 80px; }
-.voffset-8 { margin-top: 100px; }
-.voffset-9{margin-top: 150px;}
-.voffset-10 { margin-top: 250px; }
+
 .border{
     outline:1px solid #ff0000;
 }
-input[type='checkbox'],input[type='radio']{
-    cursor:pointer;
-}
+
 img.img-thumbnail{
     box-shadow: 8px 8px 5px #888888;
     margin-bottom:10px;
@@ -93,47 +54,16 @@ img.img-thumbnail{
   -moz-box-shadow: 1px 9px 13px 9px rgba(34,34,34,1);
   box-shadow: 1px 9px 13px 9px rgba(34,34,34,1);*/
 }
-.navbar-collapse.in {
-    overflow-y: inherit;
-    padding-bottom: 15px;
-}
+
 .cstm-cntr{
     margin-top:70px;
 }
 
-footer {
-    overflow: hidden;
-    height: 50px;
-    background-color: #000 !Important;
-}
-footer .row{
-    padding:10px;
-}
-.footer_p {
-    color:#f5f5f5 !important;
-}
 
 
 
-p,span,strong,label,ul li a {
-   color: #222222 !important;
-}
-a.link{
-    color:#4545dd;
-}
-a.link:hover {
-    color: #08086d;
-    text-decoration:none;
-}
- .overlay_loading{
-    position: fixed;
-    z-index: 100000000000;
-    background-color: rgba(0,0,0,0.4);
-    top:0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px
-}
+
+
 
 /********csutom styles*********/
 
@@ -205,7 +135,7 @@ tabs-prodinfo ul
 
 tabs-prodinfo ul li a
 {
-    display:inline-block !important;   
+    display:inline-block !important;
     font-size:14px !important;
     text-transform:uppercase !important;
     font-weight:bold !important;
@@ -251,69 +181,3 @@ span#SelectedPlace{
     border-color: #000 !important;
     text-transform:uppercase !important;
 }
-/****************sticky footer **************/
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-
-
-/********RWD********/
-@media (min-width:320) and (max-width:768px)
-{
-        p.cstm-prod-desc  {
-            font-size:14px;
-            margin-top:20px;
-        }
-        #myTab li a{
-            font-size:12px !important;
-        }
-        .selectCityGoBtn{
-            margin-top: 50px;
-        }
-}
-@media (max-width:768px)
-{
-
-}
-@media (max-width:992px)
-{
-
-}
-/********RWD END********/

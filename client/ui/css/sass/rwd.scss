@@ -1,0 +1,22 @@
+/********override BS rwd styles********/
+@media (min-width:320) and (max-width:768px)
+{
+        p.cstm-prod-desc  {
+            font-size:14px;
+            margin-top:20px;
+        }
+        #myTab li a{
+            font-size:12px !important;
+        }
+        .selectCityGoBtn{
+            margin-top: 50px;
+        }
+}
+@media (max-width:768px)
+{
+
+}
+@media (max-width:992px)
+{
+
+}

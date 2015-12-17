@@ -1,0 +1,26 @@
+    <div class="col-md-6 col-lg- col-md-offset-2">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">First Name</label>
+              <input type="text" class="form-control" id="txtfName" placeholder="First Name" ng-model="user.fName" ng-required="true">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Last Name</label>
+              <input type="text" class="form-control" id="txtlName" placeholder="Last Name" ng-model="user.lName" ng-required="true">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="txtEmail" placeholder="Email" ng-model="user.email" ng-required="true">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="txtPaswd" placeholder="Password" ng-model="user.paswd" ng-required="true">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm-Password</label>
+              <input type="password" class="form-control" id="txtCnfPaswd" placeholder="Confirm Password" ng-model="user.cnfPaswd" ng-required="true">
+            </div>
+            <a href="/#" class="btn btn-default btn-default">Cancel</a>
+            <button type="submit" ng-click="createUser(user)" class="btn btn-default btn-info">Create User</button>
+          </form>
+    </div>

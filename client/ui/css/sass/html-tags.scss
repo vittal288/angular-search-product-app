@@ -1,0 +1,41 @@
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+
+header{
+    height:60px;
+    background-color:#222;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+p,span,strong,label,ul li a {
+   color: #222222 !important;
+}
+a.link{
+    color:#4545dd;
+}
+a.link:hover {
+    color: #08086d;
+    text-decoration:none;
+}
+ .overlay_loading{
+    position: fixed;
+    z-index: 100000000000;
+    background-color: rgba(0,0,0,0.4);
+    top:0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px
+}
+
+input[type='checkbox'],input[type='radio']{
+    cursor:pointer;
+}
