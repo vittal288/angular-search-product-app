@@ -76,6 +76,7 @@ ul li {
   overflow-y: inherit;
   padding-bottom: 15px; }
 
+/* styles based on HTML tags */
 body > .container {
   padding: 60px 15px 0; }
 
@@ -110,6 +111,12 @@ a.link:hover {
 
 input[type='checkbox'], input[type='radio'] {
   cursor: pointer; }
+
+small.requiredFld {
+  color: #ff0000; }
+
+.msg-error {
+  color: #ff0000 !important; }
 
 /****************sticky footer **************/
 /* Sticky footer styles

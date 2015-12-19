@@ -1,3 +1,4 @@
+/* styles based on HTML tags */
 body > .container {
   padding: 60px 15px 0;
 }
@@ -38,4 +39,8 @@ a.link:hover {
 
 input[type='checkbox'],input[type='radio']{
     cursor:pointer;
+}
+
+small.requiredFld{
+  color:$required-filed-color;
 }
