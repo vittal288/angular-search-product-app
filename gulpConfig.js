@@ -12,7 +12,7 @@ module.exports = function () {
         _uiCodeBaseDir+'/css/**/*.*',
         _uiCodeBaseDir+'/img/**/*.*',
         //_uiCodeBaseDir+'/js/**/*.*',
-        _uiCodeBaseDir+'/libs/**/*.*',
+        //_uiCodeBaseDir+'/libs/**/*.*',
         _uiCodeBaseDir+'/views/**/*.*',
         _uiCodeBaseDir+'/index.html',
     ];

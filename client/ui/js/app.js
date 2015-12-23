@@ -38,6 +38,10 @@ aroCityApp.config(function($routeProvider){
 		.when('/createUser/',{
 			controller:'createUser',
 			templateUrl:'views/user/createUser.html'
-		})		
+		})
 		.otherwise({redirectTo:'/'});
 });
+
+
+
+//# sourceMappingURL=/js/app.js.map
