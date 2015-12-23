@@ -12,6 +12,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     clean = require('gulp-clean'),
     flatten =require('gulp-flatten'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     sass  = require('gulp-sass');
 
 
@@ -49,15 +51,30 @@ gulp.task('exposeRESTAPI',function(){
 
 });
 
+//create single file out from development folder i,e js folder
+gulp.task('scriptsConcat',function(){
+  return gulp.src(gulpConfig.uiCodeBaseDir+'/js/**/*.js')
+
+      .pipe(concat('app.min.js'))
+      //.pipe(uglify())
+      .pipe(gulp.dest(gulpConfig.destinationDir+'/client/ui/js/'));
+});
+
+/*gulp.task('uglify',function(){
+  return gulp.src(gulpConfig.destinationDir+'/client/ui/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+})*/
+
 gulp.task('serve', function () {
 
  console.log('Application is running with http://localhost:8000');
- //var filter = gulpFilter('**/*.js', '!**/*.min.js');
-  //sync bower_components to libs
-  bowerSrc()
-    //.pipe(filter)
-		.pipe(gulp.dest(gulpConfig.destinationDir+'/libs'));
-    //.pipe(gulp.dest(gulpConfig.destinationDir+'/libs'));
+
+ //console.log('Bower SRC ' , gulpConfig.destinationDir);
+  //sync bower_components to client/ui/libs
+   bowerSrc()
+		.pipe(gulp.dest(gulpConfig.uiCodeBaseDir+'/libs'));
+
 
   //console.log('destinationDir' ,gulpConfig.destinationDir);
    browserSync({
@@ -72,14 +89,12 @@ gulp.task('serve', function () {
        server:
        {
            //baseDir: gulpConfig.destinationDir+gulpConfig.serveDir
-           baseDir: gulpConfig.uiCodeBaseDir
+           baseDir: gulpConfig.destinationDir+'/client/ui/'
        }
    });
 });
 
-gulp.task('copyFilesToDest',function(){
 
-});
 
 function compileReload() {
     runSequence(
@@ -100,6 +115,8 @@ gulp.task('clean', function(){
 gulp.task('move',['clean'], function(){
   // the base option sets the relative root for the set of files,
   // preserving the folder structure
+
+  //console.log('FILES to Move' , gulpConfig.filesToMove);
   gulp.src(gulpConfig.filesToMove, { base: './' })
   .pipe(gulp.dest(gulpConfig.destinationDir));
 
@@ -112,4 +129,4 @@ gulp.task('serveDev', ['exposeRESTAPI','serve','watch'],function(){
   console.log('Application is Running from ', gulpConfig.uiCodeBaseDir ,'Directory')
 });
 
-gulp.task('default',['clean','move','compileSCSStoCSS'])
+gulp.task('default',['clean','move','scriptsConcat','compileSCSStoCSS'])

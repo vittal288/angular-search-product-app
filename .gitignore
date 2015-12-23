@@ -4,5 +4,6 @@ logs/app.log
 npm-debug.log
 client/ui/libs
 logs
+output
 dist
 dist.

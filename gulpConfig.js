@@ -2,7 +2,7 @@ module.exports = function () {
 
     //var environments = require('./devLib/utils/environments');
     //var _destinationDir = './client/ui/';
-    var _destinationDir = './dist';
+    var _destinationDir = './output';
     var _uiCodeBaseDir = './client/ui/';
     var _serverCodeBaseDir = './server';
     var _serveDir = '/client/ui';
@@ -11,7 +11,7 @@ module.exports = function () {
         _uiCodeBaseDir+'/admin/**/*.*',
         _uiCodeBaseDir+'/css/**/*.*',
         _uiCodeBaseDir+'/img/**/*.*',
-        _uiCodeBaseDir+'/js/**/*.*',
+        //_uiCodeBaseDir+'/js/**/*.*',
         _uiCodeBaseDir+'/libs/**/*.*',
         _uiCodeBaseDir+'/views/**/*.*',
         _uiCodeBaseDir+'/index.html',
