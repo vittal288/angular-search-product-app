@@ -40,7 +40,7 @@ gulp.task('watch', function () {
 gulp.task('compileSCSStoCSS',function(){
   gulp.src(gulpConfig.sourceDir+'/css/sass/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(gulpConfig.sourceDir+'css/'));
+    .pipe(gulp.dest(gulpConfig.sourceDir+'/css/'));
 });
 //start the server
 gulp.task('exposeRESTAPI',function(){
