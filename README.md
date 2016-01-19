@@ -1,9 +1,4 @@
 # angular-search-product-app
-<<<<<<< HEAD
-# angular-search-product-app
-=======
->>>>>>> d696d40142d7f2106f0907c1075d65f823240165
-
 
 SET UP MYSQL DATABASE Manually
 mysql -u username -p database_name < dirname\file_name.sql

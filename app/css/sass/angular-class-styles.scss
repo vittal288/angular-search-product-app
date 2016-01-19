@@ -1,0 +1,13 @@
+/*styling for angular default classes */
+
+$form-validation-error-color:#ff0000;
+$form-validation-success-color:#00ff00;
+
+form {
+  .form-control.ng-invalid{
+      border-color:$form-validation-error-color;
+  }
+  .form-control.ng-valid{
+      border-color:$form-validation-success-color;
+  }
+}

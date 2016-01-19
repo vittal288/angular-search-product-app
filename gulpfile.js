@@ -12,13 +12,14 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     gutil = require('gulp-util'),
     clean = require('gulp-clean'),
+    watch = require('gulp-watch'),
     flatten =require('gulp-flatten'),
     concat = require('gulp-concat-sourcemap'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
+    Server = require('karma').Server,
+    jasmineBrowser = require('gulp-jasmine-phantom'),
     sass  = require('gulp-sass');
-
-
 
 
 //******************************************************************************
@@ -26,59 +27,51 @@ var gulp = require('gulp'),
 gulp.task('watch', function () {
 
     console.log('gulp is watching HTML,JS and CSS files...' );
-    gulp.watch([gulpConfig.uiCodeBaseDir+'js/**/*.js'],compileReload);
-    gulp.watch(gulpConfig.uiCodeBaseDir+'css/**/*.css',compileReload);
-    gulp.watch(gulpConfig.uiCodeBaseDir+'sass/*.scss',compileReload);
-    gulp.watch(gulpConfig.uiCodeBaseDir+'views/**/*.html',compileReload);
-    gulp.watch(gulpConfig.uiCodeBaseDir+'index.html',compileReload);
+    gulp.watch([gulpConfig.sourceDir+'/js/**/*.js'],compileReload);
+    gulp.watch(gulpConfig.sourceDir+'/css/**/*.css',compileReload);
+    gulp.watch(gulpConfig.sourceDir+'/sass/*.scss',compileReload);
+    gulp.watch(gulpConfig.sourceDir+'/views/**/*.html',compileReload);
+    gulp.watch(gulpConfig.sourceDir+'/index.html',compileReload);
 
 });
 
 
 //task to convert SCSS files to CSS files
 gulp.task('compileSCSStoCSS',function(){
-  gulp.src(gulpConfig.uiCodeBaseDir+'/css/sass/main.scss')
+  gulp.src(gulpConfig.sourceDir+'/css/sass/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(gulpConfig.uiCodeBaseDir+'css/'));
+    .pipe(gulp.dest(gulpConfig.sourceDir+'css/'));
 });
 //start the server
 gulp.task('exposeRESTAPI',function(){
 
   var app = express();
   app.use(require('./server/rest_api/rest_api'));
-  app.listen(9000, function (err) {
+  app.listen(gulpConfig.restapi.port, function (err) {
       if (err) throw err;
-      console.log('REST API IS RUNNING on 9000');
-  })
+      console.log('REST API RUNNING with  '+gulpConfig.restapi.protocol+'://'+gulpConfig.restapi.host+':'+gulpConfig.restapi.port+gulpConfig.restapi.path);
+  });
 
 });
 
 //create single file out from development folder i,e js folder
-gulp.task('concat',function(){
-  console.log('CONCAT');
-  return gulp.src(gulpConfig.uiCodeBaseDir+'/js/**/*.js')
+gulp.task('concat',function(){ 
+  return gulp.src(gulpConfig.sourceDir+'/js/**/*.js')
         .pipe(concat('app.min.js'))
         //.pipe(uglify())
-        .pipe(gulp.dest(gulpConfig.destinationDir+'/client/ui/js/'));
+        .pipe(gulp.dest(gulpConfig.destinationDir+'/js/'));
 });
 
 gulp.task('serve', function () {
  console.log('Application is running with http://localhost:8000');
- //console.log('Bower SRC ' , gulpConfig.destinationDir);
-
+ 
    browserSync({
-       notify: false,
-       // Customize the BrowserSync console logging prefix
+       notify: false,       
        logPrefix: 'BrowserSync',
-       port: 8000,
-       /*https: {
-           key: "devLib/certificate/key.pem",
-           cert: "devLib/certificate/cert.cer"
-       },*/
+       port: 8000,      
        server:
-       {
-           //baseDir: gulpConfig.destinationDir+gulpConfig.serveDir
-           baseDir: gulpConfig.destinationDir+'/client/ui/'
+       {           
+           baseDir: gulpConfig.destinationDir+'/'+gulpConfig.sourceDir
        }
    });
 });
@@ -91,9 +84,7 @@ function compileReload() {
              'move',
              //'injectToIndexHtmlNoUnitTests',
              browserSync.reload
-           );
-
-    //browserSync.reload
+           );    
 }
 
 gulp.task('clean', function(){
@@ -109,8 +100,9 @@ gulp.task('move',['clean'], function(){
   .pipe(gulp.dest(gulpConfig.destinationDir));
 
 
-  //move all bower components to libs Directory
+  //pack all bower components to libs directory of dest
   gulp.src(['bower_components/**/*.min.js',
+            'bower_components/**/*.-min.js',
             'bower_components/**/*.css',
             'bower_components/**/*.eot',
             'bower_components/**/*.ttf',
@@ -118,33 +110,26 @@ gulp.task('move',['clean'], function(){
             'bower_components/**/*.woff',
             'bower_components/**/*.woff2'])
   .pipe(flatten({ includeParents: [1,1]}))
-  .pipe(gulp.dest(gulpConfig.destinationDir+'/client/ui/libs'));
+  .pipe(gulp.dest(gulpConfig.destinationDir+'/app/libs'));
 
 });
 
-/*
-gulp.task('file-operations',function(){
 
-  var srcDirpath = gulpConfig.destinationDir+'/client/ui/';
-  fs.move(srcDirpath,gulpConfig.destinationDir, function (err) {
-      if (err) return console.error(err)
-      console.log("files has been moved!")
-  }) // copies file
-
-  //remove files
-  fs.remove(gulpConfig.destinationDir,function(err){
-    if(err) return console.error(err);
-      console.log("files has been removed!")
-  })
-
+//unit testing
+gulp.task('unitTest',function(done){
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+    }, done).start();
 });
 
-*/
-gulp.task('watchServe',['exposeRESTAPI','watch','serve']);
 
-//
-gulp.task('serveDev', ['exposeRESTAPI','serve','watch'],function(){
-  console.log('Application is Running from ', gulpConfig.uiCodeBaseDir ,'Directory')
+gulp.task('devbuild',['compileSCSStoCSS','concat','move','webServe']);
+
+gulp.task('webServe', ['compileSCSStoCSS','exposeRESTAPI','serve','watch'],function(){
+  console.log('Application is Running from ', gulpConfig.destinationDir);
 });
 
-gulp.task('default',['compileSCSStoCSS','concat','clean','move'])
+
+
+gulp.task('test',['unitTest']);

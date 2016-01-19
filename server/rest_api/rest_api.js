@@ -14,7 +14,7 @@ var sHost     = configs.params.db.host,
     sDatabase = configs.params.db.database;
 
 
-//console.log('MYSQL PASSWD' , configs);
+//console.log('DATABASE Configs', configs);
 var connection = mysql.createConnection({
     host: sHost,
     user: sUser,
@@ -303,7 +303,7 @@ router.post('/client/bnnerFileUpload',function(req,res){
 
 //CSV file upload
 router.post('/client/fileUpload',function(req,res){
-  console.log('I am in client/fileUpload');
+  console.log('I am in client/fileUpload' ,req);
   var _fileName = "csv_data.csv";
   //var _dirPath =process.cwd()+"/client/csv_file/"+_fileName;
 

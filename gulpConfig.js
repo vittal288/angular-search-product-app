@@ -1,27 +1,24 @@
 module.exports = function () {
+      
+    var _destinationDir = './dist',
+        _sourceDir = './app',
+        _serverCodeBaseDir = './server';
+   
 
-    //var environments = require('./devLib/utils/environments');
-    //var _destinationDir = './client/ui/';
-    var _destinationDir = './output';
-    var _uiCodeBaseDir = './client/ui/';
-    var _serverCodeBaseDir = './server';
-    var _serveDir = '/client/ui';
-
-    var _filesToMove = [
-        _uiCodeBaseDir+'/admin/**/*.*',
-        _uiCodeBaseDir+'/css/**/*.*',
-        _uiCodeBaseDir+'/img/**/*.*',
-        //_uiCodeBaseDir+'/js/**/*.*',
-        //_uiCodeBaseDir+'/libs/**/*.*',
-        _uiCodeBaseDir+'/views/**/*.*',
-        _uiCodeBaseDir+'/index.html',
+    var _filesToMove = [            
+        _sourceDir+'/**/*'
     ];
     var config = {
-          destinationDir: _destinationDir,
-          serveDir:_serveDir,
+          destinationDir: _destinationDir,         
           serverCodeBaseDir:_serverCodeBaseDir,
           filesToMove:_filesToMove,
-          uiCodeBaseDir:_uiCodeBaseDir
-        }
+          sourceDir:_sourceDir,
+          restapi:{
+              protocol:'http',
+              host:'localhost',
+              port:9000,
+              path:'/rest-api/'              
+          }
+        };
     return config;
 };

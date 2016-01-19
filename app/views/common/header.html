@@ -1,0 +1,57 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="searchBarController">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand arocity-logo" href="#store">AROCITY</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="row border voffset-6">
+                <div class="col-lg-7">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button id="btnSelctCityDropn"  type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span ng-bind="selectedCity">{{dafaultVal}}</span> &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu srch-menu-items" role="menu">
+                                <li><a class="text-uppercase" id="All"><strong>All</strong></a></li>
+                                <li class="divider"></li>
+                                <li ng-repeat="city in cities | orderBy :'city' | unique :'city'" ng-click="selectCity(city.city)">
+                                    <a class="text-uppercase">{{city.city}}</a>
+                                <li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" ng-model="searchItem" typeahead-on-select="onSelect($item, $model, $label)"  class="form-control" placeholder="serch for a product, category or brand" typeahead="searchItem for searchItem in storeItems | filter:$viewValue | limitTo:20">
+                        <div class="input-group-btn">
+                            <button id="btnSearchItem" class="btn btn-info" ><i class="glyphicon glyphicon-search" ng-click="searchProducts(searchItem)"></i></button>
+                        </div>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+
+                <div class="col-md-3 col-lg-3">
+                  <div class="dropdown pull-right">
+                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="glyphicon glyphicon-user"></span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#createUser">Create User</a></li>
+                      <li><a href="/login">Login</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div><!-- /.row -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

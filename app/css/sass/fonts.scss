@@ -1,0 +1,28 @@
+/*defining custom fonts styles*/
+
+$font-name-normal:'Roboto-Light';
+$font-name-bold:'Roboto-Bold';
+$font-path-normal:'./customFonts/Roboto-Light';
+$font-path-bold:'./customFonts/Roboto-Bold';
+$font-type-ttf:'.ttf';
+$font-type-eot:'.eot';
+//***************************************************************
+@font-face {
+   font-family: $font-name-normal;
+   src: url($font-path-normal+$font-type-ttf) format('truetype');
+}
+@font-face {
+   font-family: $font-name-bold;
+   src: url($font-path-bold+$font-type-ttf) format('truetype');
+}
+
+a,p,label,span,small,big{
+    font-family:$font-name-normal;
+}
+h1,h2,h3,h4,h5,h6,strong,b {
+    font-family: $font-name-bold;
+}
+
+ul li {
+    list-style:none;
+}

@@ -3,7 +3,7 @@ var csv       = require('ya-csv');
 var mysql     = require('mysql');
 var looger    = require('../../logs/logger');
 var fs        = require('fs');
-var configs   = require('../../configs/config');
+var configs   = require('../config/config');
 //******************************************************************************************
 var sHost     = configs.params.db.host,
     sUser     = configs.params.db.user,
@@ -58,11 +58,11 @@ var readCSVandInsertToDB = function () {
         });*/
 
         var fs = require('fs');
-        var array = fs.readFileSync('server/csv_data/csv_data.csv').toString().split("\n");
-        var i =1;
-        iLoopLen = array.length-1;
+        var array = fs.readFileSync('server/csv_data/csv_data.csv').toString().split("\n");       
+        var iLoopLen = array.length-1;
         for(var i=1;i<iLoopLen;i++){
           var sRow = array[i];
+          //console.log('ROW',sRow);
           insertIntoDB([sRow]);
         }
     };
@@ -77,7 +77,7 @@ var readCSVandInsertToDB = function () {
             _databasetable_seller_product = "tbl_seller_product";
 
 
-        //str.replace(/\'/g, '####') replacing sinlge quote charactor with #### to avoid error in SQL syntax
+            //str.replace(/\'/g, '####') replacing sinlge quote charactor with #### to avoid error in SQL syntax
             var arrCSVData = readCSVObj.toString().replace(/\'/g, '####').split(','),
             //A to I
             tbl_product_info = arrCSVData.slice(0, 9).join(),
@@ -89,19 +89,26 @@ var readCSVandInsertToDB = function () {
         //connection.connect();
 
         //PRODUCT TABLE
+        console.log('tbl_product_info' ,tbl_product_info);
         var tbl_product_str = addSingleQuotes(tbl_product_info.toString());
-        var query1 = "insert into " + _databasetable_product + " values(''," + tbl_product_str + ")";
+        //var query1 = "insert into " + _databasetable_product + " values(''," + tbl_product_str + ")";
+        var query1 = "insert into " + _databasetable_product + " values(null," + tbl_product_str + ")";
+        console.log('Q1', query1);
         //logger.info('\n READ CSV and INSERT tbl_product_str  \n', query1);
 
         //SELLER TABLE
         var tbl_seller_str = addSingleQuotes(tbl_seller_info.toString());
-        var query2 = "insert into " + _databasetable_seller + " values(''," + tbl_seller_str + ")";
+        //var query2 = "insert into " + _databasetable_seller + " values(''," + tbl_seller_str + ")";
+        var query2 = "insert into " + _databasetable_seller + " values(null," + tbl_seller_str + ")";
         //logger.info('\n READ CSV and INSERT tbl_seller_str  \n', query2);
+        //console.log('Q2', query2);
 
         //OFFER TABLE
         var tbl_offer_str = addSingleQuotes(tbl_offer_info.toString());
-        var query3 = "insert into " + _databasetable_offer + " values(''," + tbl_offer_str + ")";
+        //var query3 = "insert into " + _databasetable_offer + " values(''," + tbl_offer_str + ")";
+        var query3 = "insert into " + _databasetable_offer + " values(null," + tbl_offer_str + ")";
         //logger.info('\n READ CSV and INSERT tbl_offer_str  \n', query3);
+        //console.log('Q3', query3);
 
         //executeing multiple queries in single shot by enabling multipleStatements=true in  MYSQL create connection config
       /*  connection.query(query1 + ";" + query2 + ";" + query3 + ";", function (err, results) {
