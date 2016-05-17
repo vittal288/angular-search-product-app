@@ -4,7 +4,7 @@ exports.params={
     db: {
             host: 'localhost',
             user: 'root',
-            password: 'root',
+            password: '',
             database: 'arocity_temp',
             multipleStatements: true
         }

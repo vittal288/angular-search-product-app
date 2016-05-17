@@ -3,12 +3,19 @@
 
 module.exports = function(config) {
   config.set({
-
+    
+    plugins: [
+      //"karma-phantomjs-launcher",
+      "karma-jasmine",
+      "karma-coverage",
+      "karma-chrome-launcher"
+    ],
+    
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
@@ -20,8 +27,11 @@ module.exports = function(config) {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'client/**/*.js',
+      'app/**/*.js',
       'test/**/*.js'
+      
+      //'sample/app/service.js',
+      //'sample/test/specs.js'
     ],
 
 
@@ -29,21 +39,28 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
-
-
+    
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
+    
+    
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors:{
+      'sample/app/service.js':['coverage']
+    },
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
+    
+    
 
     // web server port
-    port: 8080,
+    port: 9876,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -61,12 +78,9 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
     // Which plugins to enable
-    plugins: [
-      "karma-phantomjs-launcher",
-      "karma-jasmine"
-    ],
+    
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -75,5 +89,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-}
+  });
+};

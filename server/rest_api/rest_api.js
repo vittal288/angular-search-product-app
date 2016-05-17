@@ -7,6 +7,7 @@ var readCSVandInsert = require('../readCSVandInsert/readCSVandInsert');
 var looger           = require('../../logs/logger');
 var configs          = require('../config/config');
 var router           = express.Router();
+var bodyParser       = require('body-parser');
 //******************************************************************************
 var sHost     = configs.params.db.host,
     sUser     = configs.params.db.user,
@@ -29,6 +30,11 @@ connection.connect();
 router.get('/', function (req,res) {
     res.send('INDEX PAGE');
 });
+router.use( bodyParser.json() );       // to support JSON-encoded bodies
+router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
 //definging router
 //************************************************************************
 router.get('/rest-api/fetchDistinctCities', function (req, res) {
@@ -269,9 +275,8 @@ router.get('/rest-api/filterSearchedProducts/brandName/:brandName/cityName/:city
 
 /***************************ADMIN PANEL OPERATIONS ********************************/
 router.get('/admin',function(req,res) {
-    var adminPage = process.cwd()+"/client/ui/admin/admin.html";
-    //console.log(adminPage);
-    res.sendFile(adminPage)
+    var adminPage = process.cwd()+"/client/ui/admin/admin.html";    
+    res.sendFile(adminPage);
 });
 
 //Banner file Upload
@@ -303,13 +308,11 @@ router.post('/client/bnnerFileUpload',function(req,res){
 
 //CSV file upload
 router.post('/client/fileUpload',function(req,res){
-  console.log('I am in client/fileUpload' ,req);
-  var _fileName = "csv_data.csv";
-  //var _dirPath =process.cwd()+"/client/csv_file/"+_fileName;
-
+  //console.log('I am in client/fileUpload' ,req);
+  var _fileName = "csv_data.csv"; 
   var _dirPath =process.cwd()+"/server/csv_data/"+_fileName;
 
-  console.log("DIR PATH",_dirPath);
+  //console.log("DIR PATH",_dirPath);
   //receieve AJAX query parameter data
     var sData="",oData;
     req.on("data",function(chunk){
@@ -331,10 +334,95 @@ router.post('/client/fileUpload',function(req,res){
   });
 });
 
+//********************************** USER RELATED *************************
+router.post('/rest-api/createUser', function (req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    
+    
+    //REQUEST OBJECT--> user:{fName: "VITTAL", lName: "KAMKAR", email: "VITTAL288@gmail.com", paswd: "123", cnfPaswd: "123"}
+    var fName = "'"+ req.body.user.fName +"'",
+        lName = "'"+ req.body.user.lName +"'",
+        email = "'"+ req.body.user.email +"'",
+        paswd = "'"+ req.body.user.paswd +"'";
+        
+       
+    var query = "";
+    if (true) {
+        query = "INSERT INTO user_master (first_name,last_name,email_addr,password) VALUES("+ fName+","+lName+","+email+","+paswd+")";
+    }    
+    //console.log('QUERY',  query);
+    logger.info('\n MYSQL @@@@@@ createUser \n', query);
+    connection.query(query, function (err, rows, fields) {
+        if (err) {
+            console.error(err);
+            res.statusCode = 500;
+            res.send({
+                result: 'error',
+                err: err.code
+            });
+        }
+        res.send({
+            result: 'success',
+            err: '',
+            fields: fields,
+            json: rows,
+            length: rows.length
+        });
+    });
+});
+
+//***************************************************************************************************
+router.post('/rest-api/authUser', function (req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    
+    
+    //REQUEST OBJECT--> user:{fName: "VITTAL", lName: "KAMKAR", email: "VITTAL288@gmail.com", paswd: "123", cnfPaswd: "123"}
+     //console.log('EMAIL', req.body.user.email);
+     var email = "'"+ req.body.user.email +"'",
+         password = "'"+ req.body.user.password +"'";
+               
+    var query = "";
+    if (true) {                
+            query ="SELECT * FROM user_master where email_addr=" + email + "AND password="+password;                    
+    }    
+    //console.log('QUERY',  query);    
+    logger.info('\n MYSQL @@@@@@ authUser \n', query);
+    connection.query(query, function (err, rows, fields) {       
+        if (err) {
+            console.error(err);
+            res.statusCode = 500;
+            res.send({
+                result: 'error',
+                err: err.code
+            });
+        }
+        else{
+           var arRetUserInfo =[];
+           if(rows.length>0){
+                var oUser ={};
+                oUser.fName = rows[0].first_name;
+                oUser.lName = rows[0].last_name;
+                arRetUserInfo.push(oUser);
+            }        
+            res.send({
+                result: 'success',
+                err: '',
+                //fields: fields,
+                json: arRetUserInfo,
+                //length: rows.length
+            });  
+        }
+       
+    });
+});
 //undefined methods
 //************************************************************************
 router.get('*', function (req, res) {
-    res.status(405).send('Method is not allowed')
+    res.status(405).send('Method is not allowed');
 });
 
 //export the router module

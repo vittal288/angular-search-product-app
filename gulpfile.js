@@ -55,7 +55,7 @@ gulp.task('exposeRESTAPI',function(){
 });
 
 //create single file out from development folder i,e js folder
-gulp.task('concat',function(){ 
+gulp.task('concat',function(){
   return gulp.src(gulpConfig.sourceDir+'/js/**/*.js')
         .pipe(concat('app.min.js'))
         //.pipe(uglify())
@@ -64,13 +64,13 @@ gulp.task('concat',function(){
 
 gulp.task('serve', function () {
  console.log('Application is running with http://localhost:8000');
- 
+
    browserSync({
-       notify: false,       
+       notify: false,
        logPrefix: 'BrowserSync',
-       port: 8000,      
+       port: 8000,
        server:
-       {           
+       {
            baseDir: gulpConfig.destinationDir+'/'+gulpConfig.sourceDir
        }
    });
@@ -84,7 +84,7 @@ function compileReload() {
              'move',
              //'injectToIndexHtmlNoUnitTests',
              browserSync.reload
-           );    
+           );
 }
 
 gulp.task('clean', function(){
